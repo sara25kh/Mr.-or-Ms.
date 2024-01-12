@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the web page -->
     <title>Gender Prediction</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
+<!-- Main container for the webpage -->
 <div class="container">
+    
+    <!-- Background image div -->
     <div class="background-image"></div>
+    
+    <!-- Content box containing the form and prediction sections -->
     <div class="content-box">
+        
+        <!-- Form container with left and right columns -->
         <div class="form-container">
+            
+            <!-- Left column containing user input form -->
             <div class="left-column">
                 <h1>Mr. or Ms.?</h1>
+                <!-- User input form with name, gender options, and submit button -->
                 <form id="genderPredictionForm" onSubmit="submitForm(event)">
                     Name:
                     <input type="text" id="name" name="nameSearch" value="" size="20" maxlength="64" />
@@ -24,25 +40,29 @@
                     <input type="button" value="Save" size="12" onclick="saveUserInput()" />
                 </form>
             </div>
+
+            <!-- Right column containing prediction and saved answer sections -->
             <div class="right-column">
                 <h2>Prediction</h2>
+                <!-- Container to display the prediction result -->
                 <div id="ans"> </div>
+                <!-- Container for displaying saved answers -->
                 <div class="saved-answer-container">
                     <h3>Saved Answer</h3>
                     <p>Display saved answer here</p>
+                    <!-- Button to clear saved answer -->
                     <button onclick="clearSavedAnswer()">Clear</button>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        
+        </div> <!-- End of form-container -->
 
-<script src="/script.js"></script> <!-- Link to your JavaScript file -->
+    </div> <!-- End of content-box -->
+
+</div> <!-- End of container -->
+
+<!-- Link to external JavaScript file -->
+<script src="/script.js"></script>
+
 </body>
 </html>
-
-
-
-
-
-
