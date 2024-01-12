@@ -14,19 +14,19 @@
         <div class="form-container">
             <div class="left-column">
                 <h1>Mr. or Ms.?</h1>
-                <form action="http://httpbin.org/get" method="get">
+                <form id="genderPredictionForm" onSubmit="submitForm(event)">
                     Name:
-                    <input type="text" name="nameSearch" value="" size="20" maxlength="64" />
+                    <input type="text" id="name" name="nameSearch" value="" size="20" maxlength="64" />
                     <br />
-                    <input type="radio" name="gender" value="M" /> Men <br />
-                    <input type="radio" name="gender" value="F" /> Female <br />
+                    <input type="radio" name="gender" value="Male" /> Male <br />
+                    <input type="radio" name="gender" value="Female" /> Female <br />
                     <input type="submit" value="Submit" size="9" /><br />
-                    <input type="button" value="Save" size="9" />
+                    <input type="button" value="Save" size="12" onclick="saveUserInput()" />
                 </form>
             </div>
             <div class="right-column">
                 <h2>Prediction</h2>
-                <p>JavaScript Prediction Result</p>
+                <div id="ans"> </div>
                 <div class="saved-answer-container">
                     <h3>Saved Answer</h3>
                     <p>Display saved answer here</p>
@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<script src="script.js"></script> <!-- Link to your JavaScript file -->
+<script src="/script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
 
@@ -45,31 +45,4 @@
 
 
 
-<!--<html>
-    <head>
-        <title>Mr. or Ms.?</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Two Column Layout</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <div class="content-container">
-            <div class="container">
-                <div class="column">
-                    <h1>Mr. or Ms.?</h1>
-                    <form action="http://httpbin.org/get" method="get">
-                        Name:
-                        <input type="text" name="nameSearch" value="" size="20" maxlength="64" />
-                        <br />
-                        <input type="radio" name="gender" value="M" /> Men <br />
-                        <input type="radio" name="gender" value="F" /> Female <br />
-                        <input type="onsubmit" value="Submit" size="9" /><br />
-                        <input type="save" value="Save" size="9" />
-                    </form>   
-                </div>
-                <div class="column">
-                    <h1>Prediction</h1>
-        </div>        
-    </body>
-</html>*/
+

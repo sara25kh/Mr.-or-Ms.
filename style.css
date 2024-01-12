@@ -14,7 +14,7 @@ body {
 .background-image {
     grid-column: 1;
     grid-row: 1;
-    background: url('background-image.jpg') center/cover no-repeat;
+    background: url('blueIMG.jpg') center/cover no-repeat;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -44,10 +44,18 @@ body {
 
 .right-column {
     margin-left: 20px;
+    position: relative;
 }
 
 .saved-answer-container {
-    margin-top: 20px;
+    margin-top: 2px;
+    border-style: dashed;/* Dashed line border*/
+    /*border-top: 10px ; /* Dashed line border for the top of the saved-answer-container */
+    border-color: #000;
+    padding: 6px; /* Add padding to maintain space between the dashed line and content */
 }
 
+.left-column input {
+    margin-bottom: 10px;
+}
 /* Add more styling as needed */
