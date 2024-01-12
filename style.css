@@ -1,9 +1,11 @@
+/* Resetting default margin, padding, and font for the entire document */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
+/* Main container using grid layout to cover the entire viewport height */
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -11,6 +13,7 @@ body {
     height: 100vh;
 }
 
+/* Background image covering the container with positioning and styling */
 .background-image {
     grid-column: 1;
     grid-row: 1;
@@ -18,9 +21,10 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Set z-index to ensure it stays behind other elements */
 }
 
+/* Centralized content box using flexbox for alignment */
 .content-box {
     grid-column: 1;
     grid-row: 1;
@@ -29,32 +33,36 @@ body {
     align-items: center;
 }
 
+/* Styling for the form container with background, padding, border-radius, and box shadow */
 .form-container {
     display: flex;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
 }
 
+/* Styling for left and right columns within the form container */
 .left-column,
 .right-column {
-    flex: 1;
+    flex: 1; /* Equal flex distribution for left and right columns */
 }
 
+/* Styling for the right column with margin, positioning, and relative positioning */
 .right-column {
     margin-left: 20px;
     position: relative;
 }
 
+/* Styling for the container displaying saved answers with dashed line border */
 .saved-answer-container {
     margin-top: 2px;
-    border-style: dashed;/* Dashed line border*/
-    /*border-top: 10px ; /* Dashed line border for the top of the saved-answer-container */
-    border-color: #000;
+    border-style: dashed; /* Dashed line border */
+    border-color: #000; /* Black color for the dashed border */
     padding: 6px; /* Add padding to maintain space between the dashed line and content */
 }
 
+/* Styling for input elements within the left column with margin */
 .left-column input {
     margin-bottom: 10px;
 }
